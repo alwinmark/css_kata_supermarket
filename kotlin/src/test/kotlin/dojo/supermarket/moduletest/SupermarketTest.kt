@@ -19,7 +19,7 @@ class SupermarketTest {
 
         val cart =
             ShoppingCart()
-        cart.addItemQuantity(apples, 2.5)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 2.5))
 
         val teller = Teller(catalog)
         teller.addSpecialOffer(SpecialOfferType.TenPercentDiscount, toothbrush, 10.0)
@@ -64,7 +64,7 @@ class SupermarketTest {
         // arrange
         val emptyCatalog  = FakeCatalog()
         val cart = ShoppingCart()
-        cart.addItemQuantity(apples, 0.5)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 0.5))
 
         val teller = Teller(emptyCatalog)
 
@@ -80,7 +80,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 3.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 3.0))
 
         val teller = Teller(catalog)
 
@@ -97,7 +97,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, -2.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, -2.0))
 
         val teller = Teller(catalog)
 
@@ -114,7 +114,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(toothbrush, 1.99)
-        cart.addItemQuantity(toothbrush, 0.5)
+        cart.addShoppingCartItem(ShoppingCartItem(toothbrush, 0.5))
 
         val teller = Teller(catalog)
 
@@ -131,7 +131,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, -1.99)
-        cart.addItemQuantity(apples, 2.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 2.0))
 
         val teller = Teller(catalog)
 
@@ -148,7 +148,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 2.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 2.0))
 
         val teller = Teller(catalog)
 
@@ -166,7 +166,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 3.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 3.0))
 
         val teller = Teller(catalog)
 
@@ -184,7 +184,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 7.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 7.0))
 
         val teller = Teller(catalog)
 
@@ -202,11 +202,11 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 7.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 7.0))
         val teller = Teller(catalog)
 
         // act
-        cart.addItemQuantity(apples, 7.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 7.0))
         val receipt = teller.checksOutArticlesFrom(cart)
 
         // assert
@@ -219,7 +219,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 1.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 1.0))
 
         val teller = Teller(catalog)
 
@@ -237,7 +237,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 2.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 2.0))
 
         val teller = Teller(catalog)
 
@@ -255,7 +255,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 7.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 7.0))
 
         val teller = Teller(catalog)
 
@@ -273,7 +273,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, -7.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, -7.0))
 
         val teller = Teller(catalog)
 
@@ -291,7 +291,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 7.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 7.0))
 
         val teller = Teller(catalog)
 
@@ -309,7 +309,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 1.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 1.0))
 
         val teller = Teller(catalog)
 
@@ -327,7 +327,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 5.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 5.0))
 
         val teller = Teller(catalog)
 
@@ -345,7 +345,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 11.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 11.0))
 
         val teller = Teller(catalog)
 
@@ -363,7 +363,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, -7.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, -7.0))
 
         val teller = Teller(catalog)
 
@@ -381,7 +381,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 11.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 11.0))
 
         val teller = Teller(catalog)
 
@@ -399,7 +399,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 11.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 11.0))
 
         val teller = Teller(catalog)
 
@@ -417,7 +417,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, -11.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, -11.0))
 
         val teller = Teller(catalog)
 
@@ -435,7 +435,7 @@ class SupermarketTest {
         val catalog = FakeCatalog()
         val cart = ShoppingCart()
         catalog.addProduct(apples, 1.99)
-        cart.addItemQuantity(apples, 11.0)
+        cart.addShoppingCartItem(ShoppingCartItem(apples, 11.0))
 
         val teller = Teller(catalog)
 
