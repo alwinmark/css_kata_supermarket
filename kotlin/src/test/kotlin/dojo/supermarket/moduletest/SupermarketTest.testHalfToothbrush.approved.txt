@@ -1,0 +1,4 @@
+toothbrush                          1.00
+  1.99 * 0
+
+Total:                              1.00
